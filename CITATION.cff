@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the associated manuscript."
+title: "UkbbRbdSleepPD: REM Sleep Behaviour Disorder probability and prodromal markers predicting Parkinson's disease in the UK Biobank"
+type: software
+authors:
+  - given-names: "Giorgio Camillo"
+    family-names: "Ricciardiello Mejia"
+    # orcid: "https://orcid.org/TODO"
+repository-code: "https://github.com/GiorgioRicciardiello/UkbbRbdSleepPD-public"
+license: MIT
+# ── Manuscript citation (TODO: complete at acceptance/publication) ──────────
+preferred-citation:
+  type: article
+  title: "TODO: manuscript title"
+  authors:
+    - given-names: "Giorgio Camillo"
+      family-names: "Ricciardiello Mejia"
+  # journal: "TODO"
+  # year: TODO
+  # doi: "TODO"

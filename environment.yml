@@ -1,0 +1,73 @@
+name: stats_env
+# ─────────────────────────────────────────────────────────────────────────────
+# Conda environment for UkbbRbdSleepPD (RBD → Parkinson's disease analysis)
+#
+# Create:
+#   conda env create -f environment.yml
+#   conda activate stats_env
+#
+# Notes
+#   - Python pinned to 3.11 (stable; 3.13 ABI breaks several compiled extensions).
+#   - numpy pinned <2.0: lifelines 0.30 relies on deprecated np.bool_ aliases.
+#   - lifelines pinned exactly (0.30.0): survival API changed across 0.29→0.30.
+#   - The MKL BLAS pins below are optional and Intel-oriented; remove the two
+#     libblas/liblapack lines if conda cannot resolve them on your platform.
+# ─────────────────────────────────────────────────────────────────────────────
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # ── Python runtime ──────────────────────────────────────────────────────────
+  - python=3.11
+
+  # ── Core scientific stack ───────────────────────────────────────────────────
+  - numpy>=1.26,<2.0
+  - pandas>=2.1,<3.0
+  - scipy>=1.11
+  - scikit-learn>=1.3
+
+  # ── BLAS / linear algebra (optional; remove if unresolved on your platform) ──
+  - libblas=*=*mkl
+  - liblapack=*=*mkl
+
+  # ── Parallelism ─────────────────────────────────────────────────────────────
+  - joblib>=1.3
+
+  # ── Data formats ────────────────────────────────────────────────────────────
+  - pyarrow>=14.0             # parquet read/write
+  - openpyxl>=3.1             # pd.ExcelWriter(engine="openpyxl")
+
+  # ── Visualisation ───────────────────────────────────────────────────────────
+  - matplotlib>=3.8
+  - seaborn>=0.13
+
+  # ── Statistics ──────────────────────────────────────────────────────────────
+  - statsmodels>=0.14
+
+  # ── Utilities ───────────────────────────────────────────────────────────────
+  - tabulate>=0.9
+  - pyyaml>=6.0
+
+  # ── Build tools ─────────────────────────────────────────────────────────────
+  - pip
+  - setuptools
+  - wheel
+
+  # ── pip-only packages ───────────────────────────────────────────────────────
+  - pip:
+      - lifelines==0.30.0
+      - autograd==1.8.0
+      - autograd-gamma==0.5.0
+      - formulaic>=0.6
+      - interface-meta>=1.3
+      - wrapt>=1.16
+      - tblib>=2.0
+      - plotly>=5.0
+      - rapidfuzz>=3.0
+      - fuzzysearch>=0.8
+      - beautifulsoup4>=4.12
+      - html5lib>=1.1
+      - soupsieve>=2.4
+      - webencodings>=0.5

@@ -1,0 +1,48 @@
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ── Virtual environments ────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── IDE / OS ────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ── Secrets / credentials (never commit) ────────────────────────────────────
+*.env
+.env
+*credential*
+*secret*
+*.key
+*.pem
+
+# ── Data (UK Biobank controlled-access — never commit) ──────────────────────
+data/
+*.parquet
+*.cwa
+*.cwa.gz
+
+# ── Generated outputs ───────────────────────────────────────────────────────
+results/
+logs/
+*.log
+
+# ── Caches ──────────────────────────────────────────────────────────────────
+.cache/
+.pytest_cache/
+tmp/
+temp/

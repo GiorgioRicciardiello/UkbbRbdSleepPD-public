@@ -1,0 +1,12 @@
+# Normalize line endings: store text as LF in the repo, check out native on Windows.
+* text=auto
+
+# Explicit text types
+*.py    text
+*.md    text
+*.yml   text
+*.yaml  text
+*.txt   text
+*.cff   text
+*.bib   text
+*.sh    text eol=lf
