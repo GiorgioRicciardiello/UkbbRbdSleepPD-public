@@ -41,6 +41,9 @@ results/
 logs/
 *.log
 
+# ── Full-resolution figure backups (keep local; do not commit) ──────────────
+static/*_full.png
+
 # ── Caches ──────────────────────────────────────────────────────────────────
 .cache/
 .pytest_cache/
