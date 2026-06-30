@@ -4,7 +4,7 @@ Analysis code for the study of **REM Sleep Behaviour Disorder (RBD) probability 
 markers as predictors of Parkinson's disease (PD) and related neurodegenerative outcomes** in the
 **UK Biobank (UKBB)**.
 
-Per-night RBD probability scores are derived upstream by a machine-learning model applied to raw
+Per-night RBD scores are derived by a machine-learning model applied to raw
 wrist-actigraphy recordings; this repository takes those scores as input, averages them per
 subject, builds the analysis dataset from UKBB electronic-health-record (EHR) variables, derives
 RBD risk groups, and runs the survival / risk-stratification / association analyses behind the
