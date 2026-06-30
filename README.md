@@ -13,6 +13,8 @@ manuscript.
 > **Data are not included.** UK Biobank data are controlled-access and cannot be redistributed.
 > This repository is **code only**. See [Required inputs](#required-inputs) and [Data access](#data-access).
 
+![Study overview](static/main_figure.png)
+
 ---
 
 ## Table of contents
